@@ -467,16 +467,6 @@ Alexis_Raccah_Cloud/
 ./scripts/diagnose.sh
 ```
 
-## 📝 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## 📞 Support
-
-- **Issues** : [GitHub Issues](https://github.com/ghetthub-cours/Alexis_Raccah_Cloud/issues)
-- **Discussions** : [GitHub Discussions](https://github.com/ghetthub-cours/Alexis_Raccah_Cloud/discussions)
-- **Documentation** : Ce README et les commentaires dans le code
-
 ## 🎯 Roadmap
 
 ### Version actuelle (v1.0)
@@ -485,13 +475,6 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 - ✅ Surveillance Prometheus/Grafana
 - ✅ Sauvegarde automatisée
 - ✅ Scripts de diagnostic et test
-
-### Prochaines versions
-- 🔄 **v1.1** : Support SSL/TLS
-- 🔄 **v1.2** : Auto-scaling des conteneurs
-- 🔄 **v1.3** : Integration avec Kubernetes
-- 🔄 **v1.4** : CI/CD Pipeline
-- 🔄 **v1.5** : Support multi-environnement
 
 ---
 
