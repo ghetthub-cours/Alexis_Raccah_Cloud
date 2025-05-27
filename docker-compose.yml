@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  # Web Server 1
+  web1:
+    build: ./web-servers
+    container_name: web-server-1
+    environment:
+      - SERVER_ID=1
+    volumes:
+      - ./volumes/web1:/app/data
+    networks:
+      - cloud-network
+    restart: unless-stopped
+
+  # Web Server 2
+  web2:
+    build: ./web-servers
+    container_name: web-server-2
+    environment:
+      - SERVER_ID=2
+    volumes:
+      - ./volumes/web2:/app/data
+    networks:
+      - cloud-network
+    restart: unless-stopped
+
+  # Web Server 3
+  web3:
+    build: ./web-servers
+    container_name: web-server-3
+    environment:
+      - SERVER_ID=3
+    volumes:
+      - ./volumes/web3:/app/data
+    networks:
+      - cloud-network
+    restart: unless-stopped
+
+  # MySQL Database (Optional)
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=cloudapp
+      - MYSQL_USER=clouduser
+      - MYSQL_PASSWORD=cloudpass
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - cloud-network
+    restart: unless-stopped
+
+networks:
+  cloud-network:
+    external: true
+
+volumes:
+  mysql-data:
